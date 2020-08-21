@@ -1,0 +1,205 @@
+.center{
+	padding: 30px 0 40px 0;
+	background-color: #f6f6f6;
+}
+.centerBox{
+	border-top: 1px solid white;
+	
+}
+.lineTop{
+	border-top: 4px solid #ececec;
+}
+.order-success-wrapper{
+	padding: 30px 55px;
+	background-color: white;
+}
+.order01{
+	height: 57px;
+	box-sizing: border-box;
+	background: url(http://pic.secoo.com/imagesPic/newCartPic/c_14.jpg) no-repeat left center;
+	padding-left: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+p.ordertext01{
+	font-size: 18px;
+	font-family: "microsoft yahei";
+	color: #333;
+	padding: 3px 0 5px 0;
+	font-weight: bold;
+}
+p.ordertext02{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 0 0 0;
+}
+p.ordertext02>span.order-num>span{
+	color: #c69c6d;
+	cursor: pointer;
+	
+}
+p.ordertext02>span.order-num>span:hover{
+	text-decoration: underline;
+}
+p.ordertext02>span.order-money>span{
+	color: #9d003f;
+}
+.order02>p{
+	padding: 20px 0;
+	font-size: 12px;
+	color: #999;
+}
+/* 倒计时 */
+span.minute-span,span.second-span{
+	color: red;
+	padding: 0 3px;
+}
+
+/* 银行卡 */
+.bank-wrapper{
+	background-color: white;
+}
+.options{
+	margin-top: 20px;
+	display: flex;
+}
+.options>li{
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+	padding: 5px 20px;
+	background-color: #ececec;
+	cursor: pointer;
+	color: #666;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+.options>li:nth-of-type(1){
+	border-left: 1px solid white;
+}
+/* 激活 */
+.options>li.active{
+	border-top: 1px solid  #ececec ;
+	background-color: white;
+}
+.cart-Wrapper{
+	padding: 30px 55px;
+}
+.unionTitle{
+	color: #333;
+}
+.unionTitle>strong{
+	color: #666;
+	font-size: 12px;
+	margin-right: 5px;
+}
+.cart-list{
+	padding: 30px 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.cart-list>li{
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+p.bankP{
+	width: 160px;
+	height: 28px;
+	margin-left: 8px;
+	padding: 4px 0 4px 5px;
+	border: 1px solid #ddd;
+	position: relative;
+	box-sizing: content-box;
+}
+p.bankP:hover{
+	cursor: pointer;
+	border: 1px solid goldenrod;
+}
+i.bankPic{
+	display: block;
+	width: 160px;
+	height: 28px;
+	background: url(http://pic.secoo.com/imagesPic/newCartPic/bank1.png) no-repeat top left;
+}
+.save-cart li:nth-of-type(1) i.bankPic{
+	background-position-y:0 ;
+}
+.save-cart li:nth-of-type(2) i.bankPic{
+	background-position-y:-31px;
+}
+.save-cart li:nth-of-type(3) i.bankPic{
+	background-position-y:-61px;
+}
+.save-cart li:nth-of-type(4) i.bankPic{
+	background-position-y:-93px;
+}
+.save-cart li:nth-of-type(5) i.bankPic{
+	background-position-y:-120px;
+}
+.save-cart li:nth-of-type(6) i.bankPic{
+	background-position-y:-150px;
+}
+.save-cart li:nth-of-type(7) i.bankPic{
+	background-position-y:-175px ;
+}
+.save-cart li:nth-of-type(8) i.bankPic{
+	background-position-y:-202px;
+}
+p.bankP>span{
+	width: 18px;
+	height: 34px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	background-color: #c4af94;
+	text-align: center;
+	color: #fff;
+	line-height: 16px;
+}
+.credit-list li:nth-of-type(1) i.bankPic{
+	background-position-y:-233px ;
+}
+.credit-list li:nth-of-type(2) i.bankPic{
+	background-position-y:-260px;
+}
+.credit-list li:nth-of-type(3) i.bankPic{
+	background-position-y:-290px;
+}
+.credit-list li:nth-of-type(4) i.bankPic{
+	background-position-y:-320px;
+}
+.credit-list li:nth-of-type(5) i.bankPic{
+	background-position-y:-350px;
+}
+.credit-list li:nth-of-type(6) i.bankPic{
+	background-position-y:-378px;
+}
+.credit-list li:nth-of-type(7) i.bankPic{
+	background-position-y:-405px ;
+}
+.credit-list li:nth-of-type(8) i.bankPic{
+	background-position-y:-436px;
+}
+.save-cart,.credit-list{
+	display: none;
+}
+.save-cart.show,.credit-list.show{
+	display: block;
+}
+p.bNext>span{
+	font-size: 14px;
+	background-color: #e4e4e4;
+	color: #999;
+	cursor: not-allowed;
+	padding: 7px 30px;
+}
+p.bNext>span.active{
+	background-color: #E83C39;
+	color: white;
+	cursor: pointer;
+}

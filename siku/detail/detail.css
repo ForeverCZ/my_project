@@ -1,0 +1,347 @@
+/* 内容 */
+.content-wrapper {
+	padding: 40px 50px 20px 20px;
+	/* background-color: lightpink; */
+}
+
+.contents {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contents>div {
+	height: 400px;
+}
+
+.contents>div.info_l {
+	width: 480px;
+	background-color: white;
+}
+
+.contents>div.info_2 {
+	width: 597px;
+	/* background-color: black; */
+}
+
+/* 比例实现一比一 */
+.thumbnail-image {
+	float: left;
+	height: 100%;
+	width: 80px;
+	/* 设置I盒模型 */
+	box-sizing: border-box;
+	/* 设置边框 */
+	border: 1px solid #bbb;
+
+}
+
+.thumbnail-image>ul {
+	font-size: 0;
+	height: 100%;
+}
+
+.thumbnail-image>ul,
+.thumbnail-image>ul>li {
+	width: 100%;
+	box-sizing: border-box;
+}
+.thumbnail-image>ul>li.showZoom::before{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	background-color: rgba(0,0,0,.3);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.3),0 0 8px 0 rgba(0,0,0,.5);
+
+}
+.thumbnail-image>ul>li {
+	height: calc(100% / 5);
+	position: relative;
+}
+
+.thumbnail-image>ul>li>div {
+	/* 实现一比一 */
+	width: 100%;
+	height: 100%;
+}
+
+.thumbnail-image>ul>li>div>img {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+/* 大图 */
+.big-image-wrapper {
+	box-sizing: border-box;
+	height: 100%;
+	margin-left: 80px;
+	/* 为大图定位用 */
+	position: relative;
+}
+
+.big-image-wrapper>.big-imgList-wrapper {
+	padding-top: 100%;
+	width: 100%;
+	position: relative;
+	/* 十字光标 */
+	cursor: crosshair;
+}
+
+.big-image-wrapper>.big-imgList-wrapper>ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.big-image-wrapper>.big-imgList-wrapper>ul>li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.6s;
+}
+
+.big-image-wrapper>.big-imgList-wrapper>ul>li.show {
+	opacity: 1;
+}
+
+.big-image-wrapper>.big-imgList-wrapper>ul>li>img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+.zoom {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	z-index: 5;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5), 0 0 10px 0 rgba(0, 0, 0, .8);
+	display: none;
+	top: 0;
+	left: 0;
+	background-color: white;
+	border-radius: 10px;
+}
+
+/* 显示小遮罩 */
+.big-image-wrapper>.big-imgList-wrapper:hover>.zoom {
+	display: block;
+}
+
+/* 设置黑色遮罩层 */
+.big-image-wrapper>.big-imgList-wrapper::before {
+	content: "";
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+/* 显示褐色遮罩层 */
+.big-image-wrapper>.big-imgList-wrapper:hover::before {
+	display: block;
+}
+
+/* 存在bug,只能让大图的z-index设置为2 */
+
+/* 巧借用zoomBig为big-imgList-wrapper的父亲 */
+.big-imgList-wrapper+.zoomBig {
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0%;
+	background-color: white;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	transition: all 0.2s ease-out;
+	transform: scale(0);
+}
+
+/* 划出big-imgList-wrapper消失 */
+
+
+.big-imgList-wrapper:hover+.zoomBig {
+	transform: scale(1);
+	left: 113%;
+}
+
+/* info_2 */
+.proName {
+	padding: 0 0 20px 20px;
+	border-bottom: 1px dashed lightgreen;
+}
+
+.proName h2 {
+	width: 450px;
+	color: ##323232;
+	font-size: 16px;
+}
+
+.proName h3 {
+	width: 450px;
+	color: #e93a38;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.proDetails {
+	/* 消除空白基线 */
+	font-size: 0;
+	padding: 15px 0 15px 20px;
+	border-bottom: 1px dashed lightgreen;
+}
+
+.proDetails>.proPrice>span:nth-of-type(1) {
+	color: #666;
+	font-size: 12px;
+}
+
+.proDetails>.proPrice>span:nth-of-type(2) {
+	color: #E93A38;
+	font-size: 30px;
+	margin-left: 35px;
+}
+
+.proDetails>.proProduct {
+	margin-top: 20px;
+}
+
+.proDetails>.proProduct>span {
+	color: #666;
+	font-size: 12px;
+}
+
+.proDetails>.proProduct>span:nth-of-type(2) {
+	margin-left: 47px;
+}
+
+.proDetails>.proProduct>span:nth-of-type(2)>span:nth-of-type(1) {
+	color: #E93A38;
+}
+
+/* buyNUm */
+.buyNUm {
+	display: inline-block;
+	color: #666;
+	font-size: 12px;
+	padding: 30px 0 15px 20px;
+}
+
+.buyNUm>.clickNum {
+	border: 1px solid #eee;
+	margin-left: 20px;
+}
+
+.buyNUm>.clickNum>input {
+	width: 34px;
+	height: 18px;
+	outline: none;
+	border: none;
+	text-align: center;
+}
+
+/* 雪碧图 */
+.buyNUm>.clickNum>span.add,
+.buyNUm>.clickNum>span.less {
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+	position: relative;
+}
+/* 用来禁止输入 */
+.buyNUm>.clickNum>span.less.disabled::before,.buyNUm>.clickNum>span.add.disabled::before{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,.7);
+	z-index: 99999;
+}
+.buyNUm>.clickNum>span.less {
+	background-image: url(http://pic16.secooimg.com/home/detail/detail_icon6.png);
+	background-position: right -69px;
+	background-repeat: no-repeat;
+}
+
+.buyNUm>.clickNum>span.add{
+	background-image: url(http://pic16.secooimg.com/home/detail/detail_icon6.png);
+	background-repeat: no-repeat;
+	background-position: right -47px;
+}
+
+.buyNUm>.clickNum>span.less:hover {
+	background-position-x: -178px;
+}
+
+.buyNUm>.clickNum>span.add:hover {
+	background-position-x: -178px;
+}
+
+
+.buyNUm>.supNum {
+	margin-left: 20px;
+}
+
+.buyNUm>.supNum>.color9d0 {
+	color: #e93b39 !important;
+}
+/* 加入购物车---去结算 */
+.buyCart{
+	padding: 15px 0 15px 20px;
+	/* 消除空白 */
+	font-size: 0;
+	margin-top: 20px;
+	
+}
+.buyCart>span{
+	display: inline-block;
+	height: 40px;
+	/* 垂直居中 */
+	line-height: 40px;
+	/* 水平居中 */
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+}
+.buyCart>span.addCart,.buyCart>span.toMoney{
+	width: 180px;
+	display: inline-block;
+	box-sizing: border-box;
+	/* 垂直居中 */
+	vertical-align: middle;
+}
+.buyCart>span.addCart{
+	background-color: #FF0036;
+	color: white;
+}
+.buyCart>span.toMoney{
+	display: inline-block;
+	height: 40px;
+	border: 1px solid #FF0036;
+	background-color: #FFEDED;
+	color: #FF0036;
+	margin-left: 20px;
+}

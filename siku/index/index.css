@@ -1,0 +1,325 @@
+/* index.html */
+.banner {
+	height: 980px;
+	margin-top: 20px;
+	margin-bottom: 55px;
+	/* background-color: lightpink; */
+}
+
+.banner-left {
+	position: relative;
+	float: left;
+	width: 530px;
+	height: 790px;
+	margin-right: 30px;
+}
+
+/* 遮罩显示 */
+.banner-left:hover>a>div.mask {
+	opacity: 1;
+}
+
+.banner-left>a {
+	display: block;
+}
+
+.banner-left>a>img {
+	width: 100%;
+}
+
+img.banner-left-bottom {
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	bottom: -100px;
+	right: 35px;
+
+}
+
+.banner-right {
+
+	height: 100%;
+	overflow: hidden;
+}
+
+.banner-right-top {
+	height: 410px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.banner-right-top>a {
+	display: block;
+	height: 100%;
+	position: relative;
+}
+
+.banner-right-top>a>div.mask {
+	left: calc(100% - 480px) !important;
+}
+
+.banner-right-top>a:hover>div.mask {
+	opacity: 1;
+	
+}
+
+.banner-right-top>a>img.imgL {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 266px;
+}
+
+.banner-right-top>a>img.imgR {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: 480px;
+}
+
+.banner-right-bottom {
+	position: relative;
+	width: 100%;
+	cursor: pointer;
+
+}
+
+.banner-right-bottom>video {
+	width: 100%;
+	height: 550px;
+	border: none;
+	background-color: black;
+}
+
+.banner-right-bottom>img {
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+	left: 0;
+	top: 0;
+}
+
+/* 遮罩层 */
+.mask {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, .3);
+	transition: 0.6s ease-in-out;
+}
+
+.banner-right-bottom:hover>img+.mask {
+	opacity: 1;
+}
+
+.play {
+	font-size: 0;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 110px;
+	height: 110px;
+	/* 居中 */
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	z-index: 99999;
+	background-color: rgba(0, 0, 0, .5);
+
+}
+
+/* 子内容垂直居中 */
+.play::after {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+/* 绘制三角形 */
+.play::before {
+	content: "";
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border: 16px solid transparent;
+	border-left: 25px solid white;
+	vertical-align: middle;
+	transform: translateX(40%);
+}
+
+
+/* Editor pick */
+.editor-pick {
+	margin-bottom: 40px;
+}
+
+.editor-pick>h3.editor-pick-title {
+	width: 100%;
+	height: 38px;
+	margin-bottom: 40px;
+	background: url('https://mpic.secooimg.com/images/2018/11/07/editor-pick.png') no-repeat center, url('https://mpic.secooimg.com/images/2018/11/07/title-line.png') no-repeat bottom;
+}
+.editor-pick>.editor-pick-list-wrapper{
+	height: 400px;
+	position: relative;
+}
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list {
+	height: 100%;
+	font-size: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	opacity: 0;
+	transition: 0.7s;
+	width: 100%;
+	position: absolute;
+}
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list.showPcik{
+	transition: 0.7s;
+	opacity: 1;
+}
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li {
+	display: inline-block;
+	width: 19%;
+	height: 100%;
+	background-color: #FFB81C;
+	overflow: hidden;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a {
+	position: relative;
+	top: 0;
+	display: block;
+	height: 100%;
+	background-color: #f5f5f5;
+	transition: 0.3s;
+	/* transform: translate3d(0, 0, 0); */
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li:hover>a {
+	position: relative;
+	top: -10px;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-img>img {
+	width: 100%;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-img {
+	position: relative;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-img>.mask {
+	/* 衣服有白色背景 为了消除 借助遮罩层 */
+	background-color: rgba(0, 0, 0, .1);
+	opacity: .3;
+	display: block;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-details>p {
+	color: black;
+	/* 一行,多余省略号 */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-details>p.product-name {
+	font-size: 18px;
+	height: 28px;
+	font-family: 'CASLON224STD-BOOKITALIC';
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-details>p.product-desc {
+	font-size: 12px;
+	height: 44px;
+	font-family: PingFangSC-Regular, Microsoft YaHei, tahoma, arial, Hiragino Sans GB;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-details {
+	padding: 34px 27px 0;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li:hover>a>.product-details p {
+	color: #ffb81c;
+}
+
+/* 下划线 */
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-details>.line {
+	background-color: #000;
+	height: 2px;
+	width: 80px;
+	margin-bottom: 18px;
+}
+
+.editor-pick>.editor-pick-list-wrapper>ul.editor-pick-list>li>a>.product-details>p.product-price {
+	font-family: 'FuturaLT-Light';
+	font-size: 14px;
+}
+
+/* 下方目录 */
+.bottom-dir {
+	position: relative;
+	margin-top: 30px;
+	height: 57px;
+	background: url(https://mpic.secooimg.com/images/2018/11/07/editor-pick-logo.png) no-repeat center, url(https://mpic.secooimg.com/images/2018/11/07/bottom-line.png) no-repeat 100%/100%;
+}
+
+
+.bottom-dir>.prev {
+	margin-left: -45px;
+}
+
+.bottom-dir>.next {
+	margin-left: 30px;
+}
+
+.bottom-dir>.prev,
+.bottom-dir>.next {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	color: black;
+}
+
+.bottom-dir>a:hover {
+	color: #9c003f;
+}
+
+/* fashion-wardrobe */
+.fashion-wardrobe {
+	position: relative;
+	height: 630px;
+}
+
+/* 遮罩层显示 */
+
+.fashion-wardrobe:hover>a.left-img>div.mask {
+	opacity: 1;
+}
+
+.fashion-wardrobe>a.left-img {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 950px;
+}
+
+.fashion-wardrobe>a.right-img {
+	display: inline-block;
+	width: 641px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 99999;
+}

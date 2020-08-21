@@ -1,0 +1,190 @@
+/* 列表容器 */
+.order-wrapper{
+	margin-top: 50px;
+}
+.order-wrapper>ul{
+	display: inline-block;
+	height: 48px;
+	background-color: #111111;
+	border-top-left-radius: 3000px;
+	border-bottom-right-radius: 3000px;
+}
+.order-wrapper>ul>li:first-child{
+	margin-left: 80px;
+}
+.order-wrapper>ul>li:last-child{
+	margin-right: 45px;
+}
+.order-wrapper>ul>li{
+	color: white;
+	cursor: pointer;
+	padding: 5px 20px;
+	/* margin: 0 20px; */
+	line-height: normal;
+	display: inline-block;
+	/* 防止抖动 */
+	border-right: 1px transparent solid;
+	
+}
+.order-wrapper>ul>li.select>span.order-name{
+	color: red!important;
+}
+.order-wrapper>ul>li:hover{
+	color: red;
+}
+.order-wrapper>ul>li:not(.rate):hover{
+	border-right: 1px white solid;
+	
+}
+.order-wrapper>ul>li>span{
+}
+.order-wrapper>ul>li>span.order-name{
+	font-size: 15px;
+}
+.order-wrapper>ul>li>span.order-span{
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
+}
+/* 排序 */
+.order-wrapper>ul>li>span.top-checked{
+	background-image: url(image/top.png);
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.order-wrapper>ul>li>span.botttom-checked{
+	background-image: url(image/bottom.png);
+}
+
+
+/* 列表 */
+.order-wrapper{
+	
+}
+.listData-content{
+	padding: 0 20px;
+	margin: 20px 0;
+	
+}
+.listData-content>ul{
+	font-size: 0;
+}
+.listData-content>ul>li{
+	display: inline-block;
+	width: 290px;
+	height: 395px;
+	/* background-color: lightpink; */
+	box-sizing: border-box;
+	padding: 0 11px;
+}
+.listData-content>ul>li>div{
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px 7px;
+	border: 2px solid transparent;
+	
+}
+.listData-content>ul>li>div:hover{
+	border: 2px solid #ccc;
+}
+/* 从第五个开始选择 */
+.listData-content>ul>li:nth-of-type(n+5){
+	margin-top: 10px;
+}
+.listData-content>ul>li>div>a{
+	display: block;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+	text-align: center;
+}
+.listData-content>ul>li>div>a::before{
+	content: "";
+	vertical-align: middle;
+	height: 100%;
+	display: inline-block;
+}
+/* 人气值 */
+.listData-content>ul>li>div>a>span.hot{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	z-index: 5;
+	width: 28px;
+	height: 28px;
+	background-image: url(image/hot.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.listData-content>ul>li>div>a.image>img{
+	width: 150px;
+	height: 150px;
+	transform: scale(1);
+	transition: 0.6s ease-in-out;
+	vertical-align: middle;
+	display: inline-block;
+}
+.listData-content>ul>li>div>a.image>img:hover{
+	transform: scale(1.4);
+}
+.listData-content>ul>li>div>a>span.sale-wraaper{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	font-size: 13px;
+}
+.listData-content>ul>li>div>a>span.sale-wraaper>span.sale-name{
+	color: black;
+}
+.listData-content>ul>li>div>a>span.sale-wraaper>span.sale-num{
+	color: red;
+	text-shadow:0 0 3px #FF0000;
+}
+.listData-content>ul>li>div>p.loca-info{
+
+}
+.listData-content>ul>li>div>p.loca-info>span{
+	font-size: 12px;
+	color: white;
+	padding: 3px 5px;
+	background-color: black;
+	margin-right: 5px;
+}
+/* 名字 */
+.listData-content>ul>li>div>div.dl_name{
+	padding: 8px 0;
+	border-top: 1px solid #bbb;
+	margin-top: 10px;
+}
+.listData-content>ul>li>div>div.dl_name>a{
+	font-size: 12px;
+	color: #323232;
+	/* 超出两行省略 */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+/* money */
+.listData-content>ul>li>div>p.money-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.listData-content>ul>li>div>p.money-wrapper>span.money{
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+}
+.listData-content>ul>li>div>p.money-wrapper>span.colletcion{
+	font-size: 12px;
+	color: #666;
+}
+.listData-content>ul>li>div>p.money-wrapper>span.colletcion:hover{
+	color: red;
+	cursor: pointer;
+}

@@ -1,0 +1,142 @@
+.options>ul {
+	display: flex;
+	align-items: center;
+}
+
+.options>ul>li {
+	padding: 7px 50px;
+	color: white;
+	background-color: black;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.options>ul>li:nth-of-type(1) {
+	border-right: 1px solid white;
+}
+
+.options>ul>li:hover {
+	background-color: #7f69b2;
+}
+
+.options>ul>li.active {
+	background-color: #7f69b2;
+}
+
+.blank-line {
+	margin-top: 30px;
+	border-bottom: 20px solid rgb(237, 237, 237);
+}
+
+.pay-title>ul{
+	background-color: #7f69b2;
+	color: white;
+}
+
+.pay-wrapper>ul>li,.pay-title>ul{
+	display: flex;
+}
+.pay-title>ul>li{
+	padding: 8px 0;
+	text-align: center;
+}
+
+.pay-title>ul>li:nth-of-type(1),.pay-wrapper>ul>li>div:nth-of-type(1) {
+	flex: 4;
+}
+
+.pay-title>ul>li:nth-of-type(2),.pay-wrapper>ul>li>div:nth-of-type(2) {
+	flex: 2;
+}
+
+.pay-title>ul>li:nth-of-type(3),.pay-wrapper>ul>li>div:nth-of-type(3) {
+	flex: 2;
+}
+
+.pay-title>ul>li:nth-of-type(4),.pay-wrapper>ul>li>div:nth-of-type(4) {
+	flex: 2;
+}
+.pay-wrapper>ul>li{
+	box-sizing: content-box;
+	height: 80px;
+	padding: 20px 0;
+}
+.main-num-title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #999;
+	font-size: 12px;
+	padding: 10px 8px;
+}
+.main-num-title,div.pay-wrapper>ul{
+	background-color: rgb(245,245,245);
+}
+.del-img>span{
+	font-size: 16px;
+}
+.del-img>span:hover{
+	color: red;
+	cursor: pointer;
+}
+
+.main-num-title>p>span{
+	margin-right: 20px;
+}
+.pay-wrapper>ul{
+	padding: 0 8px;
+	border-top: 1px solid #eee;
+}
+div.pay-wrapper>ul>li>div{
+	height: 100%;
+	color: #999;
+	font-size: 12px;
+}
+div.pay-wrapper>ul>li>div:nth-of-type(n+2){
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+div.pay-desc{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+div.pay-desc>div{
+	height: 100%;
+}
+div.desc-left{
+	flex: 1;
+}
+div.desc-left>a{
+	height: 100%;
+	display: block;
+}
+div.desc-left>a>img{
+	width: 80px;
+	height: 100%;
+	border: 1px solid #ccc;
+}
+div.desc-right{
+	
+	flex:3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+div.pay-wrapper:nth-of-type(n+2){
+	margin-top: 20px;
+}
+.pay-notice,.no-pay-notice{
+	display: none;
+}
+.pay-notice.show,.no-pay-notice.show{
+	display: block;
+}
+.pay-notice>p,.no-pay-notice>p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0 10px 0;
+}

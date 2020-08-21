@@ -1,0 +1,122 @@
+.MySiku_01{
+	cursor: pointer;
+	width: 820px;
+	padding: 12px 0;
+	box-shadow: 0 0 3px 0 #ddd;
+	display: flex;
+	align-items: center;
+	transition: all 0.6s;
+	/* justify-content: space-around; */
+}
+.MySiku_01:hover{
+	box-shadow: 2px 2px 5px 0 #ccc;
+}
+.alterInfo_h1{
+	margin-left: 50px;
+	width: 328px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-image: url(http://my.secoo.com/images/jb_bg.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	height: 115px;
+	/* flex-wrap: 0; */
+}
+.alterInfo_h1-left>img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.alterInfo_h1-right{
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-left: 10px;
+	font-size: 14px;
+}
+.alterInfo_h2{
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
+.alterInfo_h2>span{
+	padding: 10px 15px;
+	background-color: #666;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+}
+.hot-wrapper{
+	margin-top: 20px;
+}
+.hot-wrapper>ul.hot-list{
+	display: flex;
+}
+.hot-wrapper>ul.hot-list>li{
+	padding: 10px 20px;
+	color: black;
+	cursor: pointer;
+	border-radius: 2px;
+}
+.hot-wrapper>ul.hot-list>li.show{
+	color: white;
+	border-radius: 5px;
+	background-color: #333;
+}
+.hot-list-content{
+	display: none;
+}
+.hot-list-content.activeShow{
+	display: block;
+}
+.hot-list-content>ul{
+	font-size: 0;
+}
+.hot-list-content>ul>li{
+	width: calc(100% / 6);
+	box-sizing: border-box;
+	padding: 15px 10px;
+	display: inline-block;
+	
+}
+.hot-list-content>ul>li>div{
+	border: 1px solid #eee;
+}
+.hot-list-content>ul>li>div:hover{
+	border: 1px solid #ddd;
+}
+.hot-list-content>ul>li>div>a.img-wrap{
+	display: block;
+	overflow: hidden;
+}
+.hot-list-content>ul>li>div>a.img-wrap:hover>img{
+	transform: scale(1.4);
+}
+.hot-list-content>ul>li>div>a.img-wrap>img{
+	width: 100%;
+	transition: all 0.6s;
+	transform: scale(1);
+}
+.hot-list-content>ul>li>div>.title{
+	display: block;
+	padding: 5px 0;
+}
+.hot-list-content>ul>li>div>.title>a{
+	font-size: 12px;
+	color: #666;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.hot-list-content>ul>li>div>p.price{
+	font-size: 14px;
+	color: black;
+}
+.hot-list-content>ul>li>div>p.price>span.pri{
+	color: red;
+}

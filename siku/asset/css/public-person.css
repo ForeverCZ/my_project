@@ -1,0 +1,83 @@
+/* 个人中心公共样式 */
+.person-wraaper{
+	padding: 30px 0 50px 0;
+	/* background-color: lightpink; */
+	background-color: rgb(237,237,237);
+}
+.person-wraaper-content{
+	
+}
+.person-wraaper-left{
+	box-sizing: border-box;
+	float: left;
+	width: 180px;
+	background-color: white;
+	margin-right: 40px;
+	border-top: 3px solid blueviolet;
+	padding:0 25px;
+}
+.person-wraaper-right{
+	/* height: 500px; */
+	overflow: hidden;
+	/* background-color: #eee; */
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	min-height: 40px;
+}
+.h2_mysecoo{
+	padding: 24px 0 14px 15px;
+}
+.h2_mysecoo>a{
+	font-size: 18px;
+	color: #000;
+}
+.line{
+	background-image: url(http://my.secoo.com/images/line.gif);
+	height: 1px;
+	overflow: hidden;
+}
+.person-wraaper-left>dl{
+	padding-bottom: 6px;
+}
+.person-wraaper-left>dl>dt{
+	font-size: 14px;
+	color: #000;
+	padding: 12px 0 7px;
+}
+.person-wraaper-left>dl>dd{
+	font-size: 12px;
+	line-height: 32px;
+}
+.person-wraaper-left>dl>dd>a{
+	color: #888;
+	padding-left: 20px;
+	background-position: 0 -29px;
+	display: block;
+	background-image: url(http://my.secoo.com/images/mySecoo.png);
+	background-repeat: no-repeat;
+}
+
+.person-wraaper-left>dl>dd>a:hover{
+	text-decoration: underline;
+	color:  #7f69b2;
+}
+.person-wraaper-left>dl>dd>a.active{
+	color:  #7f69b2;
+	font-weight: bold;
+}
+
+/* 隐藏已经支付 未支付列表 */
+
+div.payed,div.nopayed{
+	display: none;
+}
+div.payed.show,div.nopayed.show{
+	display: block;
+}
+div.pay-notice,div.no-pay-notice{
+	display: none;
+}
+div.pay-notice.show,div.no-pay-notice.show{
+	display: block;
+}

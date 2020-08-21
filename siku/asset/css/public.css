@@ -1,0 +1,20 @@
+/* 使用要求:$
+			1、高度要确定的情况下  
+			2、是v-middle的 儿子元素想要垂直居中对齐
+            3、如果v-middle的儿子元素脱离了文档流，无效
+*/
+.v-middle {
+	font-size: 0;
+}
+
+.v-middle>* {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.v-middle::after {
+	content: "";
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}

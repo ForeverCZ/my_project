@@ -1,0 +1,126 @@
+.ms_tatleBx{
+	width: 826px;
+	padding: 0 26px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+}
+.ms_brank_list,.address-edit-title{
+	padding: 15px 0;
+}
+.ms_brank_list>span,.address-edit-title>span{
+	display: inline-block;
+	font-size: 20px;
+	color: #222;
+}
+.address-edit-title>span{
+	color: #666;
+	font-size: 16px;
+	font-weight: bold;
+}
+/* 收货地址标题 */
+.address-title{
+	display: flex;
+	align-items: center;
+}
+.address-title>div{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 15px 5px;
+	text-align: center;
+	font-size: 13px;
+}
+.address-title>div:nth-of-type(1),.address-title>div:nth-of-type(4){
+	flex: 1;
+}
+.address-title>div:nth-of-type(2),.address-title>div:nth-of-type(3){
+	flex: 2;
+}
+/* 收货地址数据 */
+ul.address-list>li{
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+ul.address-list>li>div{
+	text-align: center;
+	font-size: 12px;
+	padding: 15px 5px;
+}
+ul.address-list>li>div:nth-of-type(1),ul.address-list>li>div:nth-of-type(4){
+	flex: 1;
+}
+ul.address-list>li>div:nth-of-type(2),ul.address-list>li>div:nth-of-type(3){
+	flex: 2
+}
+ul.address-list>li>div:nth-of-type(3){
+	display: flex;
+	
+}
+.address-list>li>div>span.iphone{
+	flex: 1;
+	text-align: center;
+}
+.address-list>li>div>span.isdefault{
+	flex: 1;
+	text-align: center;
+}
+.address-list>li>div>span.isdefault::before{
+	cursor: pointer;
+	content: "设为默认地址";
+	display: inline-block;
+}
+.address-list>li>div>span.isdefault:hover::before{
+	color: #9c003f;
+}
+.address-list>li>div>span.default::before{
+	content: "默认地址";
+	color: #9c003f;
+}
+/* 编辑删除 */
+.address-list>li>div.editor-wraper>span{
+	cursor: pointer;
+	color: #666;
+}
+.address-list>li>div.editor-wraper>span:hover{
+	color: #9c003f;
+}
+
+/* 保存修改数据 */
+/* 必填项效果 */
+.address-edit span.mustitem{
+	color: red;
+}
+.address-edit div.from-item-wrapper>label{
+	display: inline-block;
+	padding: 0 5px;
+	width: 90px;
+	text-align: right;
+	box-sizing: border-box;
+	font-size: 13px;
+}
+div.from-item-wrapper{
+	padding: 15px 0;
+}
+div.from-item-wrapper:not(.save-wraper)>input,div.from-item-wrapper.region-wraper>select{
+	outline: none;
+	border: none;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 8px;
+}
+div.from-item-wrapper:not(.save-wraper)>input:hover{
+	border: 1px solid #aaa;
+}
+div.from-item-wrapper.save-wraper>input[type=button]{
+	outline: none;
+	border: none;
+	padding: 8px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow:1px 1px 1px  0 #ddd;
+	margin-left: 30px;
+}
+div.from-item-wrapper.save-wraper>input[type=button]:hover{
+	box-shadow: 2px 2px 5px 0 #bbb;
+	
+}
